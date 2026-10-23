@@ -3,6 +3,7 @@ from pygame.locals import*
 import sys
 import random
 import time
+import os
 
 
 FPS= 50
@@ -14,13 +15,15 @@ HIGHSCORE=0
 GAME_SPRITES={}
 GAME_SOUNDS={}
 
-BIRD ='\\Darshil Folder\\darshil python practise\\Pygame\\bird.png'
-BIRD1 ='\\Darshil Folder\\darshil python practise\\Pygame\\bird1.png'
-PIPE ='\\Darshil Folder\\darshil python practise\\Pygame\\pipe.png'
-BASE ='\\Darshil Folder\\darshil python practise\\Pygame\\base.jpeg'
-BACKGROUND='\\Darshil Folder\\darshil python practise\\Pygame\\background.jpeg'
-MESSAGE ="\\Darshil Folder\\darshil python practise\\Pygame\\messages.png"
-CLICK='\\Darshil Folder\\darshil python practise\\Pygame\\Click.png'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+BIRD = os.path.join(BASE_DIR, 'bird.png')
+BIRD1 = os.path.join(BASE_DIR, 'bird1.png')
+PIPE = os.path.join(BASE_DIR, 'pipe.png')
+BASE = os.path.join(BASE_DIR, 'base.jpeg')
+BACKGROUND = os.path.join(BASE_DIR, 'background.jpeg')
+MESSAGE = os.path.join(BASE_DIR, 'messages.png')
+CLICK = os.path.join(BASE_DIR, 'Click.png')
 
 def WelcomeScreen(GAME_SPRITES):
     Birdx=int(SCREENWIDTH/5+30)
